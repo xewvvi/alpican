@@ -4,15 +4,16 @@
 Early bring-up efforts to run a mainline Linux kernel.
 
 ### U-Boot
-U-Boot boots via a shim:
+U-Boot now boots directly via LK:
 ```
-brom -> Preloader -> LK -> boot.img -> (shim -> U-Boot) -> Linux / Android etc.
+brom -> Preloader -> LK -> boot.img (-> U-Boot) -> Linux / Android / GRUB / etc.
 ```
-U-Boot can chainload both Linux and Android:
+**eMMC** and buttons also works:
 
-<p>
-  <img src="../assets/uboot-early.jpg" alt="U-Boot" width="400">
-</p>
+<figure style="display: inline-block; text-align: center; margin: 10px;">
+  <img src="../assets/uboot-early.jpg" alt="7" width="400">
+  <figcaption>Old Photo</figcaption>
+</figure>
 <!--- u-boot щас такой типо я покажу тебе что такое ловис --->
 
 ### Mainline Kernel
